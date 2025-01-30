@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # Load the trained model
 model = tf.keras.models.load_model("gesture_model.h5")
-class_labels = {i: label for i, label in enumerate(["Church","Enough/Satisfied","Friend","Love","Me","Mosque","Seat","Temple","You"])}  # Update with your class names
+class_labels = {i: label for i, label in enumerate(["Church","Enough/Satisfied","Friend","Love","Me","Mosque","Seat","Temple","You"])}  
 
 # Initialize webcam
 cap = cv2.VideoCapture(0)

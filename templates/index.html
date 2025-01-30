@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gesture Translator</title>
-</head>
-<body>
-    <h1>Gesture to Text Translator</h1>
-    <p>Point your gesture at the webcam for translation.</p>
-    <div>
-        <img src="{{ url_for('video_feed') }}" alt="Webcam Feed" style="border: 1px solid black;">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gradient-to-b from-gray-50 to-gray-100 min-h-screen p-4 md:p-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-white rounded-lg shadow-lg border">
+        <div class="text-center border-b p-6">
+          <h1 class="text-2xl md:text-3xl font-bold text-gray-800">
+            Gesture to Text Translator
+          </h1>
+        </div>
+        <div class="p-6">
+          <p class="text-gray-600 text-center mb-6 text-sm md:text-base">
+            Point your gesture at the webcam for translation.
+          </p>
+          
+          <div class="relative w-full aspect-video rounded-lg overflow-hidden bg-black/5">
+            <img 
+              src="/video_feed"
+              alt="Webcam Feed"
+              class="absolute inset-0 w-full h-full object-contain"
+            />
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
